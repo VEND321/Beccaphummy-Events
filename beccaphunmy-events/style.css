@@ -311,9 +311,12 @@ section {
   color: var(--text-light);
   padding-top: 80px;
   overflow: hidden;
-  background-image: url('Asset/hero.jpeg');
+  background-image: url('Asset/hero.webp');
   background-size: cover;
   background-position: center;
+}
+.hero p{
+  color: #FFFFFF;
 }
 
 .hero-overlay {
@@ -322,7 +325,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(209, 0, 0, 0.6);
+  background: rgba(145, 3, 3, 0.629);
   z-index: -1;
 }
 
