@@ -204,36 +204,54 @@
         </div>
     </section>
 
-    <!-- Booking Section -->
-    <section class="booking-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Plan Your Event</h2>
-                <p class="section-subtitle">Start your journey to a flawless event experience</p>
-            </div>
-            <div class="booking-steps">
-                <div class="step">
-                    <h3>1. Choose Your Date</h3>
-                    <input type="text" id="datepicker" placeholder="Select date">
-                </div>
-                <div class="step">
-                    <h3>2. Event Type</h3>
-                    <select id="eventTypeSelect">
-                        <option value="">Select event type</option>
-                        <option value="Wedding">Wedding</option>
-                        <option value="Corporate">Corporate</option>
-                        <option value="Social">Social</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="step">
-                    <h3>3. Get a Proposal</h3>
-                    <button id="calculateBtn" class="btn">Request Proposal</button>
-                    <div id="quoteResult"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+   <!-- Booking Section - Now Quote Calculator -->
+<section class="quote-calculator">
+  <div class="container">
+      <div class="section-header">
+          <h2>Get an Instant Quote</h2>
+          <p class="section-subtitle">Calculate estimated costs for your event</p>
+      </div>
+      
+      <div class="calculator-form">
+          <div class="form-group">
+              <label for="eventType">Event Type</label>
+              <select id="eventType" class="form-control">
+                  <option value="">Select event type</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="corporate">Corporate Event</option>
+                  <option value="birthday">Birthday Party</option>
+                  <option value="social">Social Gathering</option>
+              </select>
+          </div>
+          
+          <div class="form-group">
+              <label for="guestCount">Number of Guests</label>
+              <input type="range" id="guestCount" min="20" max="500" value="100" class="form-control">
+              <div class="range-value"><span id="guestDisplay">100</span> guests</div>
+          </div>
+          
+          <div class="form-group">
+              <label for="eventDate">Event Date</label>
+              <input type="text" id="eventDate" class="form-control datepicker" placeholder="Select date">
+          </div>
+          
+          <div class="form-group">
+              <label>
+                  <input type="checkbox" id="fullPlanning"> Include Full Planning Service
+              </label>
+              <label>
+                  <input type="checkbox" id="dayCoordination"> Include Day-of Coordination
+              </label>
+          </div>
+          
+          <button id="calculateBtn" class="btn btn-primary">Calculate Quote</button>
+          
+          <div id="quoteResult" class="quote-result">
+              <!-- Results will appear here -->
+          </div>
+      </div>
+  </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
